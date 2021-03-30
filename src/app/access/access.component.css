@@ -1,0 +1,17 @@
+div {
+    margin-top: 70px;
+}
+
+a:hover {
+    color: #125699;
+}
+
+a {
+    display: flex;
+    justify-content: center;
+    font-size: xx-large;
+    padding: 150px;
+    color: -webkit-link;
+    cursor: pointer;
+    text-decoration: underline;
+}

@@ -1,0 +1,56 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 8px 0;
+}
+
+p {
+    margin: 0;
+}
+
+.toolbar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    background-color: #1976d2;
+    color: white;
+    font-weight: 600;
+}
+
+.toolbar img {
+    margin: 0 16px;
+}
+
+.reset {
+    font-weight: 600;
+    color: white;
+    background-color: #1976d2;
+    right: 30px;
+    position: absolute;
+}
+
+.token {
+    font-weight: 600;
+    color: white;
+    background-color: #1976d2;
+    right: 120px;
+    position: absolute;
+    cursor: pointer;
+}
+
+.reset:hover,
+.token:hover {
+    color: red;
+}
+
+.reset:visited,
+.token:visited {
+    color: pink;
+}

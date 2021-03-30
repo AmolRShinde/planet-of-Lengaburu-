@@ -1,0 +1,73 @@
+#falConeDiv {
+    margin-top: 70px;
+}
+
+h1,
+h2 {
+    display: flex;
+    justify-content: center;
+}
+
+.dest {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+select {
+    width: 20%;
+    height: 22px;
+    margin-bottom: 10px;
+}
+
+option {
+    text-shadow: 0 0 black;
+}
+
+.btn {
+    color: #ffffff;
+    display: inline-block;
+    padding: 6px 12px;
+    font-size: 12px;
+    font-weight: bold;
+    line-height: 1.428571429;
+    text-align: center;
+    cursor: pointer;
+    border: 1px solid #0081cb;
+    border-radius: 4px;
+    background: #0081cb;
+    font-style: normal;
+    letter-spacing: 0.3px;
+}
+
+.btn:hover,
+.btn:focus {
+    background-color: #EBEBEB;
+    border-color: #ADADAD;
+    color: #333333;
+    text-decoration: none;
+}
+
+.btn-outline-disabled {
+    border: 1px solid #b6b6b6;
+    background: #FFFFFF;
+    color: #b6b6b6;
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.65;
+}
+
+li {
+    line-height: 2;
+}
+
+.timeMsg {
+    font-size: medium;
+    font-weight: bold;
+    margin: 20px 0px;
+}
+
+.submitBtn {
+    position: relative;
+    margin-top: 20px;
+    left: 45%;
+}

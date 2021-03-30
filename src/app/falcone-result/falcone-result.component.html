@@ -1,0 +1,11 @@
+<div style="margin-top: 70px;">
+    <div *ngIf="status else elseBlock">
+        <p>Success! Congratulations on Finding Falcone. king Shan is mighty pleased.</p>
+        <span>Time taken: {{timeTaken | distance}}</span>
+        <span>Planet found: {{planet }}</span>
+    </div>
+    <ng-template #elseBlock>
+        <p>Failure! No luck, you can try again click on Start Again button</p>
+    </ng-template>
+    <button class="btn" routerLink="/access">Start Again</button>
+</div>

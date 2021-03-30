@@ -1,0 +1,38 @@
+<div id="falConeDiv">
+    <h1>Finding Falcone</h1>
+    <h2>Select planets you want to search in:</h2>
+    <div class="dest">
+        <!-- <div *ngFor="let desti of destinations">
+            <h3>{{desti.label}}</h3>
+            <select name="{{desti.label}}" required [disabled]="desti.isEnabled" (change)="selectDestination(desti)">
+                <option value="" disabled='true' selected>Select</option>
+                <option *ngFor="let planet of planets" value="{{planet.name}}">{{planet.name}}</option>
+            </select>
+            <div *ngFor="let vechicle of vechicles">
+                <input type="radio" name="{{desti.name}}" (click)="vechicleSelected(desti, vechicle)" disabled>
+                <span>{{vechicle.name}}({{vechicle.total_no}})</span>
+            </div>
+        </div>
+        <span>Time taken: {{timeTaken}}</span> -->
+
+        <div style="width: 50%;">
+            <select (change)="selectDestination($event)">
+                <option value="select" selected disabled>Select</option>
+                <option *ngFor="let planet of planets" value="{{planet.name}}">{{planet.name}}</option>
+            </select>
+            <div *ngFor="let vechicle of vechicles">
+                <input *ngIf="vechicle.total_no> 0" id="{{vechicle.name}}" type="radio" name="vechicle" (click)="vechicleSelected(vechicle)" disabled>
+                <label *ngIf="vechicle.total_no> 0" for="{{vechicle.name}}">{{vechicle.name}} ({{vechicle.total_no}})</label>
+            </div>
+            <p class="timeMsg">Time taken: {{timeTaken | distance}}</p>
+            <button [class]="btnClass" (click)="selectVechicle()">Add Vechicle</button>
+        </div>
+        <div>
+            <span style="font-size: 1.1em; font-weight: bold;">Selected Vechicles: (Planet: Vechicle (distance))</span>
+            <ol>
+                <li *ngFor="let selVechi of selectedVechicles "><span style="font-weight: bold;">{{selVechi.Vechicle}}:</span> {{selVechi.name}} ({{selVechi.max_distance | distance}})</li>
+            </ol>
+        </div>
+    </div>
+    <button [class]="submitCls" (click)="findFalcone()">Find Falcone!</button>
+</div>
